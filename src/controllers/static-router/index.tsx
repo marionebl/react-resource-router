@@ -46,7 +46,7 @@ StaticRouter.requestResources = async (props: RequestResourcesParams) => {
 
   bootstrapStore({ ...bootstrapProps, ...overrides });
 
-  await requestRouteResources({ timeout });
+  await requestRouteResources({ timeout, isStatic: true });
 
   return getResourceStore().actions.getSafeData();
 };

@@ -147,6 +147,7 @@ type CreateResourceArg<T> =
       maxAge?: number,
       getDataLoader: GetDataLoader<T>,
       maxCache?: number,
+      isBrowser?: boolean,
     |};
 
 declare export function createResource<T>(args: CreateResourceArg<T>): RouteResource<T>;
